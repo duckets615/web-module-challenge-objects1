@@ -67,7 +67,9 @@ Using the burger object below do the following:
      (example: "teacher", "student", or "public")
   3. Depending on the string, it will return the correct discounted
      price
-  4. Check your work by invoking the function and passing in 'teacher', 'student', or 'public' as your arguments to ensure they are returning the correct price.
+  4. Check your work by invoking the function and passing in 'teacher',
+     'student', or 'public' as your arguments to ensure they are returning
+      the correct price.
 
   For example: burger.discount("teacher") would return 13.5 and 
   burger.discount("public") would return 16.2
@@ -75,7 +77,13 @@ Using the burger object below do the following:
 
 
 export const burger = {
-
+  name: "Burger", 
+  price: 18, 
+  category: "Lunch", 
+  discount: function(str) {
+    if (str === 'teacher' || str === 'student') return this.price * 0.75;
+    return this.price * 0.9; 
+  }
 }
 
 
