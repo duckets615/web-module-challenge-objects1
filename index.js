@@ -7,17 +7,28 @@ const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1a: Make a function that builds objects🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-Add to the function createMenuItems below so it will create objects following the same format found above for latte and breakfastBurrito (name, price, category).  
+Add to the function createMenuItems below so it will create objects 
+following the same format found above for latte
+ and breakfastBurrito (name, price, category).  
 The function should:
   1. Receive values for the object that will be created as parameters
   2. Create and return an object using the received values 
   
-  Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
+  Example createMenuItem('tacos', 8, 'Lunch') should return 
+  {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
 function createMenuItem(one, two, three) {
-
+  let obj = {};
+  obj.name = one;
+  obj.price = two;
+  obj.category = three;
+  return obj;
 }
+
+// Burger = new createMenuItem('burger', 5, 'dinner');
+// Pizza = new createMenuItem('pizza', 6, 'dinner');
+// Pancake = new createMenuItem('pancakes', 4, 'breakfast')
 // function CreateMenuItem(one, two, three) {
 //   this.name = one;
 //   this.price = two;
@@ -30,8 +41,10 @@ function createMenuItem(one, two, three) {
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
-  1. Pass values to createMenuItems in order to create the objects (menu items)
-  2. Create at least 3 menu items (objects) of your choosing making sure they have name, price, and category keys
+  1. Pass values to createMenuItems in order to create the 
+     objects (menu items)
+  2. Create at least 3 menu items (objects) of your choosing making
+     sure they have name, price, and category keys
   3. Log each returned object to the console  
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
@@ -43,16 +56,21 @@ Test your createMenuItems function by doing the following:
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
-burger object below that automatically calculates price depending on the a string received as a parameter. 
+You're having a lunch special! 25% off for teachers and students, 
+10% off for everyone else. Add a method to the burger object below
+ that automatically calculates price depending on the a string 
+ received as a parameter. 
 
 Using the burger object below do the following:
   1. Add a method called discount to the burger object 
-  2. The discount method should accept a string as a parameter (example: "teacher", "student", or "public")
-  3. Depending on the string, it will return the correct discounted price
+  2. The discount method should accept a string as a parameter
+     (example: "teacher", "student", or "public")
+  3. Depending on the string, it will return the correct discounted
+     price
   4. Check your work by invoking the function and passing in 'teacher', 'student', or 'public' as your arguments to ensure they are returning the correct price.
 
-  For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
+  For example: burger.discount("teacher") would return 13.5 and 
+  burger.discount("public") would return 16.2
 */
 
 
@@ -84,16 +102,20 @@ Using the reviews array above:
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following: (no function needed) 
-  1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
-  2. log the whole array to the console, make sure the new review is inside of it   
+  1. Following the same format (name, rating, feedback), add a new
+     fictitious review object to the reviews array
+  2. log the whole array to the console, make sure the new review 
+  is inside of it   
 */
 
 // console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
-Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
-  1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+Reyna's feedback is missing! Use what you know to do the following: 
+(no function needed) 
+  1. Add this feedback to Reyna's rating - "this place is chill
+     with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
   */
 
@@ -101,12 +123,15 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-Write a function to return a review based on the index of the review in the array.
+Write a function to return a review based on the index of the review
+ in the array.
 
 Use the getReviewByIndex function below to do the following:
   1. Receive an array
   2. Receive a number which is the desired index in the array
-  3. The function should return the following string: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
+  3. The function should return the following string: "{name} gave 
+    the restaurant a {rating} star review, and their feedback 
+    was: {feedback}"
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
@@ -121,10 +146,15 @@ Write a function to get information about the most recent (last) review called `
 
 Use the getLastReview function below to do the following:
   1. Receive an array of objects as a parameter
-  2. Return the last index as a string in the format: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
+  2. Return the last index as a string in the format: "{name} gave 
+  the restaurant a {rating} star review, and their feedback was: 
+  {feedback}"
   3. Invoke the function with the reviews array as the argument
   
-  For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
+  For example: getLastReview(reviews) would return: "Reyna gave the
+   restaurant a 3.5 star review, and their feedback was: this place
+    is chill with really cool people, great for getting work done 
+    on weekdays".
 */
 
 
@@ -139,7 +169,8 @@ Use the getReviewsByRating function below to do the following:
   2. Receive a rating
   3. Return an array with all the reviews in that range
 
-  For example: getReviewByRating(reviews, 4) would return these reviews in the 4 range (4-4.9):
+  For example: getReviewByRating(reviews, 4) would return these
+  reviews in the 4 range (4-4.9):
   [
     {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
@@ -169,17 +200,24 @@ Use the getLongReviews function below to do the following:
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
 
 Use the carMaker function below to do the following:
-  1. Receive a value representing the odometer (how many miles it's been driven) and use that when creating the object
-  2. Create a drive method inside the object that increases the odometer value
+  1. Receive a value representing the odometer (how many miles it's 
+     been driven) and use that when creating the object
+  2. Create a drive method inside the object that increases the 
+     odometer value
   3. Return the object
-  4. The returned object with the odometer value should have the following characteristics:
-     a. The drive method which, when called, takes a distance value as its parameter
-     b. The drive method should also cause the odometer value in the object to be increased by the distance
-     c. Then the drive method should return the updated value of the odometer
+  4. The returned object with the odometer value should have the 
+     following characteristics:
+     a. The drive method which, when called, takes a distance value 
+        as its parameter
+     b. The drive method should also cause the odometer value in 
+        the object to be increased by the distance
+     c. Then the drive method should return the updated value of '
+        the odometer
 
-  For example: Let's say we created the object in the variable car1 with an odometer value of 10.
-  Then we called car1.drive(100)
-  It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
+  For example: Let's say we created the object in the variable car1 
+  with an odometer value of 10.Then we called car1.drive(100)
+  It would return 110 because it was created with 10 as the 
+  odometer and we added 100 to it with the drive method 
 */
 
 
