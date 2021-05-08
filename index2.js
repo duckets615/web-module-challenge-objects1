@@ -9,5 +9,3 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
-const getReviewByIndex = (ar,idx) => ar[idx].feedback;
-console.log(getReviewByIndex(reviews,3));

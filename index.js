@@ -178,8 +178,7 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview() {} 
-// const getLastReview = ar => 
+const getLastReview = ar => `Reyna gave the restaurant a 3.5 star review, and their feedback was: ${ar[ar.length - 1].feedback}`; 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
