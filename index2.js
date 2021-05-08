@@ -9,16 +9,5 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
-function editFeedback(array, name, str) {
-    let length = array.length; // get static value for efficient for loop;
-    for (let i = 0; i < length; i++) {
-      if (array[i].name === name) { // check of object name matches provided name argument
-        array[i].feedback = str; // if match, change feedback value to provided feedback argument;
-        return console.log('Entry Updated'); // console log success message
-      }
-    }
-    return 'Error, entry not updated'; // if no match found or update failed, return failure message;
-  }
-  console.log(reviews);
-  editFeedback(reviews, 'Reyna', 'this place is chill with really cool people, great for getting work done on weekdays')
-  console.log(reviews);
+const getReviewByIndex = (ar,idx) => ar[idx].feedback;
+console.log(getReviewByIndex(reviews,3));

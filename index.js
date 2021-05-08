@@ -120,9 +120,7 @@ function addReview(obj, name, rating, feedback) {
   obj.push(new_obj)
 }
 
-addReview(reviews, 'me', '5', 'this place was pretty good')
-console.log(reviews);
-
+// addReview(reviews, 'me', '5', 'this place was pretty good')
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: 
@@ -159,8 +157,7 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(ar,idx){} 
-// const getReviewByIndex = (ar,idx) => 
+const getReviewByIndex = (ar,idx) => `${ar[idx].name} gave the restaurant a ${ar[idx].rating} star review, and their feedback was: ${ar[idx].feedback}`;
 
   
 
