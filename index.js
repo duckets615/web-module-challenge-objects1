@@ -242,8 +242,15 @@ Use the carMaker function below to do the following:
 
 // let make = ['Toyota', 'BMW', 'Mercedes', 'Dodge', 'Huyndai']
 function carMaker(odo) {
-
+  let obj = {
+      odometer: odo,
+      drive: function (miles) {
+          return this.odometer += miles
+      }
+  }
+  return obj
 }
+
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
