@@ -131,9 +131,19 @@ Reyna's feedback is missing! Use what you know to do the following:
      with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
   */
-
-
-
+  function editFeedback(array, name, str) {
+    let length = array.length; // get static value for efficient for loop;
+    for (let i = 0; i < length; i++) {
+      if (array[i].name === name) { // check of object name matches provided name argument
+        array[i].feedback = str; // if match, change feedback value to provided feedback argument;
+        return console.log('Entry Updated'); // console log success message
+      }
+    }
+    return 'Error, entry not updated'; // if no match found or update failed, return failure message;
+  }
+// console.log(reviews);
+// editFeedback(reviews, 'Reyna', 'this place is chill with really cool people, great for getting work done on weekdays')
+// console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review

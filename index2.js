@@ -9,14 +9,16 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
-// console.log(reviews[5].feedback);
-function addReview(obj, name, rating, feedback) {
-    let new_obj = {
-    'name': name,
-    'rating': rating,
-    'feedback': feedback,
+function editFeedback(array, name, str) {
+    let length = array.length; // get static value for efficient for loop;
+    for (let i = 0; i < length; i++) {
+      if (array[i].name === name) { // check of object name matches provided name argument
+        array[i].feedback = str; // if match, change feedback value to provided feedback argument;
+        return console.log('Entry Updated'); // console log success message
+      }
     }
-    obj.push(new_obj)
+    return 'Error, entry not updated'; // if no match found or update failed, return failure message;
   }
-  addReview(reviews, 'me', 5, 'this place was pretty good')
+  console.log(reviews);
+  editFeedback(reviews, 'Reyna', 'this place is chill with really cool people, great for getting work done on weekdays')
   console.log(reviews);
