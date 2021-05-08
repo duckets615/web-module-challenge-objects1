@@ -197,7 +197,7 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
-// const getReviewByRating = (ar, rate) =>
+const getReviewByRating = (ar, rate1, rate2) => ar.filter(obj => obj.rating >= rate1 && obj.rating <= rate2)
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -213,7 +213,7 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-// const getLongReviews = ar => 
+const getLongReviews = ar => ar.filter(obj => obj.feedback.split(' ').length > 15)
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
