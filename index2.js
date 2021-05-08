@@ -9,3 +9,14 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
+// console.log(reviews[5].feedback);
+function addReview(obj, name, rating, feedback) {
+    let new_obj = {
+    'name': name,
+    'rating': rating,
+    'feedback': feedback,
+    }
+    obj.push(new_obj)
+  }
+  addReview(reviews, 'me', 5, 'this place was pretty good')
+  console.log(reviews);
